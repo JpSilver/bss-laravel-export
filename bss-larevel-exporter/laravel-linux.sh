@@ -12,4 +12,4 @@ if [ -d "${1}/public/assets" ]; then
 else
     mv assets $1/public/
 fi
-for file in *.html; do mv -- "$file" "${1}/resources/views/pages/${file}.blade.php"; done
+for file in *.html; do mv -- "$file" "${1}/resources/views/pages/${file%.html}.blade.php"; done
